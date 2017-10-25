@@ -5,6 +5,8 @@
  */
 package proyecto.pkgfinal;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Thomas-CM
@@ -27,21 +29,268 @@ public class InterfazPago extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        radioVisa = new javax.swing.JRadioButton();
+        radioMaster = new javax.swing.JRadioButton();
+        radioPaypal = new javax.swing.JRadioButton();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        txtNombre = new javax.swing.JTextField();
+        txtApellidos = new javax.swing.JTextField();
+        txtCc = new javax.swing.JTextField();
+        txtCorreo = new javax.swing.JTextField();
+        txtTarjeta = new javax.swing.JTextField();
+        txtCvs = new javax.swing.JTextField();
+        btnPagar = new javax.swing.JButton();
+        txtPago = new javax.swing.JButton();
+        btnCancelar = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jLabel1.setText("Seccion de pagos");
+
+        jLabel2.setText("Digite sus nombres");
+
+        jLabel3.setText("Digite sus apellidos");
+
+        jLabel4.setText("Digite su numero de identificacion");
+
+        jLabel5.setText("Digite su Correo Electronico");
+
+        jLabel6.setText("Seleccion su metodo de pago ");
+
+        radioVisa.setText("Visa");
+        radioVisa.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                radioVisaActionPerformed(evt);
+            }
+        });
+
+        radioMaster.setText("Master Card");
+
+        radioPaypal.setText("Paypal");
+
+        jLabel7.setText("Digite el numero de su tarjeta");
+
+        jLabel8.setText("Digite el codigo de seguidad");
+
+        txtNombre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtNombreActionPerformed(evt);
+            }
+        });
+
+        btnPagar.setText("Pagar");
+        btnPagar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPagarActionPerformed(evt);
+            }
+        });
+
+        txtPago.setText("Ver pago");
+        txtPago.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtPagoActionPerformed(evt);
+            }
+        });
+
+        btnCancelar.setText("Cancelar");
+        btnCancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCancelarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(32, 32, 32)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(134, 134, 134)
+                        .addComponent(jLabel1))
+                    .addComponent(jLabel2)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(3, 3, 3)
+                        .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(3, 3, 3)
+                        .addComponent(jLabel3))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(3, 3, 3)
+                        .addComponent(txtApellidos, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(3, 3, 3)
+                        .addComponent(jLabel4))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(3, 3, 3)
+                        .addComponent(txtCc, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(3, 3, 3)
+                        .addComponent(jLabel5))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(3, 3, 3)
+                        .addComponent(txtCorreo, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(3, 3, 3)
+                        .addComponent(jLabel6))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(3, 3, 3)
+                        .addComponent(radioVisa)
+                        .addGap(5, 5, 5)
+                        .addComponent(radioMaster)
+                        .addGap(5, 5, 5)
+                        .addComponent(radioPaypal))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(3, 3, 3)
+                        .addComponent(jLabel7))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(3, 3, 3)
+                        .addComponent(txtTarjeta, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(3, 3, 3)
+                        .addComponent(jLabel8))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(3, 3, 3)
+                        .addComponent(txtCvs, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(53, 53, 53)
+                        .addComponent(btnPagar, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(110, 110, 110)
+                        .addComponent(txtPago))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(143, 143, 143)
+                        .addComponent(btnCancelar)))
+                .addContainerGap(60, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel1)
+                .addGap(27, 27, 27)
+                .addComponent(jLabel2)
+                .addGap(14, 14, 14)
+                .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(10, 10, 10)
+                .addComponent(jLabel3)
+                .addGap(16, 16, 16)
+                .addComponent(txtApellidos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(10, 10, 10)
+                .addComponent(jLabel4)
+                .addGap(16, 16, 16)
+                .addComponent(txtCc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(10, 10, 10)
+                .addComponent(jLabel5)
+                .addGap(6, 6, 6)
+                .addComponent(txtCorreo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(10, 10, 10)
+                .addComponent(jLabel6)
+                .addGap(6, 6, 6)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(radioVisa)
+                    .addComponent(radioMaster)
+                    .addComponent(radioPaypal))
+                .addGap(7, 7, 7)
+                .addComponent(jLabel7)
+                .addGap(6, 6, 6)
+                .addComponent(txtTarjeta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(10, 10, 10)
+                .addComponent(jLabel8)
+                .addGap(6, 6, 6)
+                .addComponent(txtCvs, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(30, 30, 30)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnPagar)
+                    .addComponent(txtPago))
+                .addGap(17, 17, 17)
+                .addComponent(btnCancelar)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void radioVisaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_radioVisaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_radioVisaActionPerformed
+
+    private void txtNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombreActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtNombreActionPerformed
+
+    private void btnPagarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPagarActionPerformed
+
+        String nombre = txtNombre.getText();
+        String apellidos = txtApellidos.getText();
+        String cc = txtCc.getText();
+        String correo = txtCorreo.getText();
+        int numero = Integer.parseInt(txtTarjeta.getText());
+        int cvs = Integer.parseInt(txtCvs.getText());
+        String metodo_pago = "";
+
+        if(radioVisa.isSelected()){
+            metodo_pago = radioVisa.getText();
+        }else if(radioMaster.isSelected()){
+            metodo_pago = radioMaster.getText();
+        }else if(radioPaypal.isSelected()) {
+            metodo_pago = radioPaypal.getText();
+        }
+
+        JOptionPane.showMessageDialog(this, "El pago esta siendo procesado " );
+
+    }//GEN-LAST:event_btnPagarActionPerformed
+
+    private void txtPagoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPagoActionPerformed
+
+        String nombre = txtNombre.getText();
+        String apellidos = txtApellidos.getText();
+        double cc = Double.parseDouble(txtCc.getText());
+        String correo = txtCorreo.getText();
+        int numero = Integer.parseInt(txtTarjeta.getText());
+        int cvs = Integer.parseInt(txtCvs.getText());
+        String metodo_pago = "";
+
+        if(radioVisa.isSelected()){
+            metodo_pago = radioVisa.getText();
+        }else if(radioMaster.isSelected()){
+            metodo_pago = radioMaster.getText();
+        }else if(radioPaypal.isSelected()) {
+            metodo_pago = radioPaypal.getText();
+        }
+
+        Pagos pagos = new Pagos();
+        pagos.setNombre(nombre);
+        pagos.setApellidos(apellidos);
+        pagos.setCc(cc);
+        pagos.setCorreo(correo);
+        pagos.setNumero_tarjeta(numero);
+        pagos.setCodigo(cvs);
+        pagos.setMetodo_pago(metodo_pago);
+
+        JOptionPane.showMessageDialog(this, "Su pago:\n"
+            + "Nombre: " + pagos.getNombre()+ "\n"
+            + "Apellido: " + pagos.getApellidos()+ "\n"
+            + "Numero de identificacion: " + pagos.getCc()+ "\n"
+            + "Correo Electronico: " + pagos.getCorreo()+ "\n"
+            + "Metodo de pago: " + pagos.getMetodo_pago()+ "\n"
+            + "Numero de tarjeta: " + pagos.getNumero_tarjeta()+ "\n"
+            + "Codigo de seguridad: " +pagos.getCodigo());
+
+    }//GEN-LAST:event_txtPagoActionPerformed
+
+    private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
+        InterfazClientes obj = new InterfazClientes();
+        obj.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_btnCancelarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -79,5 +328,25 @@ public class InterfazPago extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnCancelar;
+    private javax.swing.JButton btnPagar;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JRadioButton radioMaster;
+    private javax.swing.JRadioButton radioPaypal;
+    private javax.swing.JRadioButton radioVisa;
+    private javax.swing.JTextField txtApellidos;
+    private javax.swing.JTextField txtCc;
+    private javax.swing.JTextField txtCorreo;
+    private javax.swing.JTextField txtCvs;
+    private javax.swing.JTextField txtNombre;
+    private javax.swing.JButton txtPago;
+    private javax.swing.JTextField txtTarjeta;
     // End of variables declaration//GEN-END:variables
 }
