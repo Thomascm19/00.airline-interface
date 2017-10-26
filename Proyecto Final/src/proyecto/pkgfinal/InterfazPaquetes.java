@@ -1,19 +1,18 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package proyecto.pkgfinal;
 
-/**
- *
- * @author Thomas-CM
- */
+import java.time.Instant;
+import java.util.Date;
+import java.util.LinkedList;
+import javax.swing.JOptionPane;
+
+
+
 public class InterfazPaquetes extends javax.swing.JFrame {
 
-    /**
-     * Creates new form InterfazPaquetes
-     */
+    InterfazPaquetes graficapaquetes;
+    Paquetes paquete;
+    LinkedList<Paquetes> paquetes;
+    int contador = 0;
     public InterfazPaquetes() {
         initComponents();
     }
@@ -27,21 +26,462 @@ public class InterfazPaquetes extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel1 = new javax.swing.JLabel();
+        radioViaje_Hotel = new javax.swing.JRadioButton();
+        radioViaje_Hotel_Auto = new javax.swing.JRadioButton();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        txtCiudad_origen = new javax.swing.JTextField();
+        txtCiudad_destino = new javax.swing.JTextField();
+        jLabel6 = new javax.swing.JLabel();
+        comboNumeroHabitaciones = new javax.swing.JComboBox<>();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        comboNumeroAdutos = new javax.swing.JComboBox<>();
+        comboNumeroNiños = new javax.swing.JComboBox<>();
+        comboNumeroBebes = new javax.swing.JComboBox<>();
+        jLabel10 = new javax.swing.JLabel();
+        comboClases = new javax.swing.JComboBox<>();
+        btbReservar_Paquete = new javax.swing.JButton();
+        btbVolver = new javax.swing.JButton();
+        txtcc = new javax.swing.JTextField();
+        jLabel12 = new javax.swing.JLabel();
+        btnCancelar = new javax.swing.JButton();
+        txtPagar = new javax.swing.JButton();
+        btnBuscar = new javax.swing.JButton();
+        btnAnterior = new javax.swing.JButton();
+        jLabel13 = new javax.swing.JLabel();
+        comboSillasAdultos = new javax.swing.JComboBox<>();
+        comboSillasNiños = new javax.swing.JComboBox<>();
+        comboSillasBebes = new javax.swing.JComboBox<>();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        btnSiguiente = new javax.swing.JButton();
+        jdcFecha_ida = new com.toedter.calendar.JDateChooser();
+        jdcFecha_regreso = new com.toedter.calendar.JDateChooser();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jLabel1.setText("Selecciona tu paquete");
+
+        radioViaje_Hotel.setText("Viaje + Hotel");
+
+        radioViaje_Hotel_Auto.setText("Viaje + Hotel + Auto");
+
+        jLabel2.setText("Ciudad de origen");
+
+        jLabel3.setText("Ciudad de destino");
+
+        jLabel4.setText("Fecha de ida");
+
+        jLabel5.setText("Fecha de regreso");
+
+        jLabel6.setText("Habitaciones");
+
+        comboNumeroHabitaciones.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9" }));
+
+        jLabel7.setText("Adutos");
+
+        jLabel8.setText("Niños");
+
+        jLabel9.setText("Bebes");
+
+        comboNumeroAdutos.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9" }));
+
+        comboNumeroNiños.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9" }));
+
+        comboNumeroBebes.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9" }));
+
+        jLabel10.setText("Clase Aerea ");
+
+        comboClases.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Clase Economica", "Clase Ejecutiva" }));
+
+        btbReservar_Paquete.setText("Reservar paquete");
+        btbReservar_Paquete.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btbReservar_PaqueteActionPerformed(evt);
+            }
+        });
+
+        btbVolver.setText("Volver");
+        btbVolver.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btbVolverActionPerformed(evt);
+            }
+        });
+
+        jLabel12.setText("Digite su numero de identificacion");
+
+        btnCancelar.setText("Canelar reserva");
+        btnCancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCancelarActionPerformed(evt);
+            }
+        });
+
+        txtPagar.setText("Pagar reserva");
+        txtPagar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtPagarActionPerformed(evt);
+            }
+        });
+
+        btnBuscar.setText("Buscar reserva");
+        btnBuscar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBuscarActionPerformed(evt);
+            }
+        });
+
+        btnAnterior.setText("Reserva anterior");
+        btnAnterior.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAnteriorActionPerformed(evt);
+            }
+        });
+
+        jLabel13.setText("Seleccione su asiento(Adulto)");
+
+        comboSillasAdultos.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20" }));
+
+        comboSillasNiños.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20" }));
+
+        comboSillasBebes.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20" }));
+
+        jLabel14.setText("Seleccione su asiento(Niño)");
+
+        jLabel15.setText("Seleccione su asiento (Bebes)");
+
+        btnSiguiente.setText("Siguiente Reserva");
+        btnSiguiente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSiguienteActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel3)
+                        .addGap(100, 100, 100))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(110, 110, 110)
+                                .addComponent(jLabel1))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(radioViaje_Hotel)
+                                .addGap(103, 103, 103)
+                                .addComponent(radioViaje_Hotel_Auto))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(txtCiudad_origen, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(117, 117, 117)
+                                .addComponent(txtCiudad_destino, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(77, 77, 77))))
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel6)
+                        .addGap(179, 179, 179)
+                        .addComponent(jLabel7)
+                        .addGap(16, 16, 16)
+                        .addComponent(jLabel8)
+                        .addGap(14, 14, 14)
+                        .addComponent(jLabel9))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(comboNumeroHabitaciones, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(195, 195, 195)
+                        .addComponent(comboNumeroAdutos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(19, 19, 19)
+                        .addComponent(comboNumeroNiños, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(9, 9, 9)
+                        .addComponent(comboNumeroBebes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(240, 240, 240)
+                        .addComponent(jLabel13))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel10)
+                            .addComponent(comboClases, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(100, 100, 100)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(comboSillasAdultos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel14)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel12)
+                            .addComponent(txtcc, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(80, 80, 80)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(comboSillasNiños, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel15)
+                            .addComponent(comboSillasBebes, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(26, 26, 26)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(btnAnterior, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(60, 60, 60)
+                                .addComponent(btnSiguiente))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(btbReservar_Paquete)
+                                .addGap(61, 61, 61)
+                                .addComponent(txtPagar, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(btnCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(60, 60, 60)
+                                .addComponent(btnBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(120, 120, 120)
+                                .addComponent(btbVolver))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel4)
+                            .addComponent(jdcFecha_ida, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(91, 91, 91)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jdcFecha_regreso, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel5))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addGap(19, 19, 19)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(radioViaje_Hotel)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(7, 7, 7)
+                        .addComponent(radioViaje_Hotel_Auto)))
+                .addGap(17, 17, 17)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(2, 2, 2)
+                        .addComponent(jLabel2))
+                    .addComponent(jLabel3))
+                .addGap(6, 6, 6)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txtCiudad_origen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(8, 8, 8)
+                        .addComponent(txtCiudad_destino, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel4)
+                    .addComponent(jLabel5))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jdcFecha_ida, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jdcFecha_regreso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel6)
+                    .addComponent(jLabel7)
+                    .addComponent(jLabel8)
+                    .addComponent(jLabel9))
+                .addGap(6, 6, 6)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(comboNumeroHabitaciones, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(comboNumeroAdutos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(comboNumeroNiños, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(comboNumeroBebes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(jLabel13)
+                .addGap(4, 4, 4)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel10)
+                        .addGap(6, 6, 6)
+                        .addComponent(comboClases, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(2, 2, 2)
+                        .addComponent(comboSillasAdultos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(10, 10, 10)
+                        .addComponent(jLabel14)))
+                .addGap(2, 2, 2)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(19, 19, 19)
+                        .addComponent(jLabel12)
+                        .addGap(7, 7, 7)
+                        .addComponent(txtcc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(comboSillasNiños, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(10, 10, 10)
+                        .addComponent(jLabel15)
+                        .addGap(6, 6, 6)
+                        .addComponent(comboSillasBebes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(39, 39, 39)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnAnterior, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnSiguiente))
+                .addGap(7, 7, 7)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btbReservar_Paquete)
+                    .addComponent(txtPagar))
+                .addGap(7, 7, 7)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnCancelar)
+                    .addComponent(btnBuscar))
+                .addGap(7, 7, 7)
+                .addComponent(btbVolver)
+                .addGap(61, 61, 61))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btbReservar_PaqueteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btbReservar_PaqueteActionPerformed
+
+        String Ciudad_origen = txtCiudad_destino.getText();
+        String Ciudad_destino = txtCiudad_destino.getText();
+        Date Fecha_ida = jdcFecha_ida.getDate();
+        Date Fecha_regreso = jdcFecha_regreso.getDate();
+        int Numero_adultos = Integer.parseInt(comboNumeroAdutos.getItemAt(comboNumeroAdutos.getSelectedIndex()));
+        int Numero_niños = Integer.parseInt(comboNumeroNiños.getItemAt(comboNumeroNiños.getSelectedIndex()));
+        int Numero_bebes = Integer.parseInt(comboNumeroBebes.getItemAt(comboNumeroBebes.getSelectedIndex()));
+        int Numero_Habitaciones = Integer.parseInt(comboNumeroHabitaciones.getItemAt(comboNumeroHabitaciones.getSelectedIndex()));
+        int Numero_SillasA = Integer.parseInt(comboSillasAdultos.getItemAt(comboSillasAdultos.getSelectedIndex()));
+        int Numero_SillasN = Integer.parseInt(comboSillasNiños.getItemAt(comboSillasNiños.getSelectedIndex()));
+        int Numero_SillasB = Integer.parseInt(comboSillasBebes.getItemAt(comboSillasBebes.getSelectedIndex()));
+        String Clase = comboClases.getItemAt(comboClases.getSelectedIndex());
+        String cc = txtcc.getText();
+        String Seleccion_Paquetes = "";
+
+        if(radioViaje_Hotel.isSelected()){
+            Seleccion_Paquetes = radioViaje_Hotel.getText();
+        }else if(radioViaje_Hotel_Auto.isSelected()){
+            Seleccion_Paquetes = radioViaje_Hotel_Auto.getText();
+        }
+
+        paquetes.add(new Paquetes(Ciudad_destino,Ciudad_origen,Fecha_regreso,Fecha_ida,Numero_adultos,Numero_niños,Numero_bebes,Numero_Habitaciones,Clase,Seleccion_Paquetes,cc,Numero_SillasA,Numero_SillasB,Numero_SillasN));
+
+        JOptionPane.showMessageDialog(this, "Reserva de paquetes guardada" + paquetes.size());
+        contador = 0;
+        Limpiar();
+
+        }
+
+        public void Limpiar(){
+            txtCiudad_destino.setText("");
+            txtCiudad_origen.setText("");
+            txtcc.setText("");
+            jdcFecha_ida.setDate(Date.from(Instant.now()));
+            jdcFecha_regreso.setDate(Date.from(Instant.now()));
+            comboNumeroAdutos.setSelectedIndex(0);
+            comboNumeroNiños.setSelectedIndex(0);
+            comboNumeroBebes.setSelectedIndex(0);
+            comboSillasAdultos.setSelectedIndex(0);
+            comboSillasNiños.setSelectedIndex(0);
+            comboSillasBebes.setSelectedIndex(0);
+            comboNumeroHabitaciones.setSelectedIndex(0);
+            txtcc.setText("");
+
+    }//GEN-LAST:event_btbReservar_PaqueteActionPerformed
+
+    private void btbVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btbVolverActionPerformed
+        InterfazClientes obj = new InterfazClientes();
+        obj.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_btbVolverActionPerformed
+
+    private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
+        paquetes.remove(paquete);
+
+        JOptionPane.showMessageDialog(this, "El elemento ha sido eliminado");
+        contador = 0;
+    }//GEN-LAST:event_btnCancelarActionPerformed
+
+    private void txtPagarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPagarActionPerformed
+        InterfazPago obj = new InterfazPago();
+        obj.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_txtPagarActionPerformed
+
+    private void btnBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarActionPerformed
+        String ccBuscar = JOptionPane.showInputDialog("Ingrese la Cedula que desea buscar");
+
+        if (ccBuscar != ""){
+            for (int i=0; i<paquetes.size(); i++){
+                paquete = paquetes.get(i);
+
+                if(paquete.getCc().equals(ccBuscar)){
+                    txtCiudad_destino.setText(paquete.getCiudad_destino());
+                    txtCiudad_origen.setText(paquete.getCuidad_origen());
+                    jdcFecha_ida.setDate(paquete.getFecha_ida());
+                    jdcFecha_regreso.setDate(paquete.getFecha_regreso());
+                    comboNumeroAdutos.setSelectedIndex(paquete.getNumero_Adultos());
+                    comboNumeroNiños.setSelectedIndex(paquete.getNumero_Niños());
+                    comboNumeroBebes.setSelectedIndex(paquete.getNumero_Bebes());
+                    comboSillasAdultos.setSelectedIndex(paquete.getNumero_sillasA());
+                    comboSillasNiños.setSelectedIndex(paquete.getNumero_sillasN());
+                    comboSillasBebes.setSelectedIndex(paquete.getNumero_sillasB());
+                    txtcc.setText(paquete.getCc());
+                    comboNumeroHabitaciones.setSelectedIndex(paquete.getNumero_Habitaciones());
+                    comboClases.setToolTipText(paquete.getClase());
+                }
+            }
+        }else{
+            JOptionPane.showInputDialog("Elemento invalido");
+        }
+    }//GEN-LAST:event_btnBuscarActionPerformed
+
+    private void btnAnteriorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAnteriorActionPerformed
+        if(contador >= 0){
+            paquete = paquetes.get(contador);
+
+            txtCiudad_destino.setText(paquete.getCiudad_destino());
+            txtCiudad_origen.setText(paquete.getCuidad_origen());
+            jdcFecha_ida.setDate(paquete.getFecha_ida());
+            jdcFecha_regreso.setDate(paquete.getFecha_regreso());
+            comboNumeroAdutos.setSelectedIndex(paquete.getNumero_Adultos());
+            comboNumeroNiños.setSelectedIndex(paquete.getNumero_Niños());
+            comboNumeroBebes.setSelectedIndex(paquete.getNumero_Bebes());
+            comboSillasAdultos.setSelectedIndex(paquete.getNumero_sillasA());
+            comboSillasNiños.setSelectedIndex(paquete.getNumero_sillasN());
+            comboSillasBebes.setSelectedIndex(paquete.getNumero_sillasB());
+            txtcc.setText(paquete.getCc());
+            comboNumeroHabitaciones.setSelectedIndex(paquete.getNumero_Habitaciones());
+            comboClases.setToolTipText(paquete.getClase());
+
+            contador--;
+        }
+    }//GEN-LAST:event_btnAnteriorActionPerformed
+
+    private void btnSiguienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSiguienteActionPerformed
+
+        if(contador < paquetes.size()){
+            paquete  = paquetes.get(contador);
+
+            txtCiudad_destino.setText(paquete.getCiudad_destino());
+            txtCiudad_origen.setText(paquete.getCuidad_origen());
+            jdcFecha_ida.setDate(paquete.getFecha_ida());
+            jdcFecha_regreso.setDate(paquete.getFecha_regreso());
+            comboNumeroAdutos.setSelectedIndex(paquete.getNumero_Adultos());
+            comboNumeroNiños.setSelectedIndex(paquete.getNumero_Niños());
+            comboNumeroBebes.setSelectedIndex(paquete.getNumero_Bebes());
+            comboSillasAdultos.setSelectedIndex(paquete.getNumero_sillasA());
+            comboSillasNiños.setSelectedIndex(paquete.getNumero_sillasN());
+            comboSillasBebes.setSelectedIndex(paquete.getNumero_sillasB());
+            txtcc.setText(paquete.getCc());
+            comboNumeroHabitaciones.setSelectedIndex(paquete.getNumero_Habitaciones());
+            comboClases.setToolTipText(paquete.getClase());
+
+            contador++;
+        }
+    }//GEN-LAST:event_btnSiguienteActionPerformed
 
     /**
      * @param args the command line arguments
@@ -79,5 +519,51 @@ public class InterfazPaquetes extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btbReservar_Paquete;
+    private javax.swing.JButton btbVolver;
+    private javax.swing.JButton btnAnterior;
+    private javax.swing.JButton btnBuscar;
+    private javax.swing.JButton btnCancelar;
+    private javax.swing.JButton btnSiguiente;
+    private javax.swing.JComboBox<String> comboClases;
+    private javax.swing.JComboBox<String> comboNumeroAdutos;
+    private javax.swing.JComboBox<String> comboNumeroBebes;
+    private javax.swing.JComboBox<String> comboNumeroHabitaciones;
+    private javax.swing.JComboBox<String> comboNumeroNiños;
+    private javax.swing.JComboBox<String> comboSillasAdultos;
+    private javax.swing.JComboBox<String> comboSillasBebes;
+    private javax.swing.JComboBox<String> comboSillasNiños;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private com.toedter.calendar.JDateChooser jdcFecha_ida;
+    private com.toedter.calendar.JDateChooser jdcFecha_regreso;
+    private javax.swing.JRadioButton radioViaje_Hotel;
+    private javax.swing.JRadioButton radioViaje_Hotel_Auto;
+    private javax.swing.JTextField txtCiudad_destino;
+    private javax.swing.JTextField txtCiudad_origen;
+    private javax.swing.JButton txtPagar;
+    private javax.swing.JTextField txtcc;
     // End of variables declaration//GEN-END:variables
+
+    private static class paquetes {
+
+        private static void add(Paquetes paquetes) {
+            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        }
+
+        public paquetes() {
+        }
+    }
 }
