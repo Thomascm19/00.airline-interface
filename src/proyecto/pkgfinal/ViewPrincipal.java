@@ -99,7 +99,9 @@ public class ViewPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_btnAgentesActionPerformed
 
     private void btnClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClientesActionPerformed
-        // TODO add your handling code here:
+        ViewClientes obj = new ViewClientes();
+        obj.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_btnClientesActionPerformed
 
     /**
