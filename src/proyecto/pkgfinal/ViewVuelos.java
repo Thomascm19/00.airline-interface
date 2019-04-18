@@ -8,13 +8,13 @@ import javax.swing.JOptionPane;
  *
  * @author Thomas-CM
  */
-public class InterfazVuelos extends javax.swing.JFrame {
+public class ViewVuelos extends javax.swing.JFrame {
 
-    InterfazVuelos graficavuelos;
+    ViewVuelos graficavuelos;
     Vuelos vuelo;
     LinkedList<Vuelos> vuelos;
     int contador = 0;
-    public InterfazVuelos() {
+    public ViewVuelos() {
         initComponents();
     }
 
@@ -36,8 +36,8 @@ public class InterfazVuelos extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
-        comboNumeroNiños = new javax.swing.JComboBox<>();
-        comboNumeroBebes = new javax.swing.JComboBox<>();
+        comboNumeroNiños = new javax.swing.JComboBox<String>();
+        comboNumeroBebes = new javax.swing.JComboBox<String>();
         txtCiudad_origen = new javax.swing.JTextField();
         txtCiudad_destino = new javax.swing.JTextField();
         btbReservar = new javax.swing.JButton();
@@ -49,9 +49,9 @@ public class InterfazVuelos extends javax.swing.JFrame {
         btnCancelar = new javax.swing.JButton();
         btnSiguiente = new javax.swing.JButton();
         jLabel13 = new javax.swing.JLabel();
-        comboSillasAdultos = new javax.swing.JComboBox<>();
-        comboSillasNiños = new javax.swing.JComboBox<>();
-        comboSillasBebes = new javax.swing.JComboBox<>();
+        comboSillasAdultos = new javax.swing.JComboBox<String>();
+        comboSillasNiños = new javax.swing.JComboBox<String>();
+        comboSillasBebes = new javax.swing.JComboBox<String>();
         jLabel14 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
         btnAnterior = new javax.swing.JButton();
@@ -59,7 +59,7 @@ public class InterfazVuelos extends javax.swing.JFrame {
         radioViajeIda_Regreso = new javax.swing.JRadioButton();
         jdcFecha_ida = new com.toedter.calendar.JDateChooser();
         jdcFecha_regreso = new com.toedter.calendar.JDateChooser();
-        comboNumeroAdutos = new javax.swing.JComboBox<>();
+        comboNumeroAdutos = new javax.swing.JComboBox<String>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -81,9 +81,9 @@ public class InterfazVuelos extends javax.swing.JFrame {
 
         jLabel11.setText("Bebes");
 
-        comboNumeroNiños.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "0", "1", "2", "3", "4", "5", "6", "7", "8" }));
+        comboNumeroNiños.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "0", "1", "2", "3", "4", "5", "6", "7", "8" }));
 
-        comboNumeroBebes.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9" }));
+        comboNumeroBebes.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9" }));
 
         txtCiudad_origen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -149,11 +149,11 @@ public class InterfazVuelos extends javax.swing.JFrame {
 
         jLabel13.setText("Seleccione su asiento(Adulto)");
 
-        comboSillasAdultos.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20" }));
+        comboSillasAdultos.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20" }));
 
-        comboSillasNiños.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20" }));
+        comboSillasNiños.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20" }));
 
-        comboSillasBebes.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20" }));
+        comboSillasBebes.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20" }));
 
         jLabel14.setText("Seleccione su asiento(Niño)");
 
@@ -180,7 +180,7 @@ public class InterfazVuelos extends javax.swing.JFrame {
             }
         });
 
-        comboNumeroAdutos.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "0", "1", "2", "3", "4", "5", "6", "7", "8" }));
+        comboNumeroAdutos.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "0", "1", "2", "3", "4", "5", "6", "7", "8" }));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -384,7 +384,7 @@ public class InterfazVuelos extends javax.swing.JFrame {
     }//GEN-LAST:event_btbReservarActionPerformed
 
     private void btbVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btbVolverActionPerformed
-        InterfazClientes obj = new InterfazClientes();
+        ViewClientes obj = new ViewClientes();
         obj.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_btbVolverActionPerformed
@@ -421,7 +421,7 @@ public class InterfazVuelos extends javax.swing.JFrame {
 
     private void txtPagarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPagarActionPerformed
 
-        InterfazPago obj = new InterfazPago();
+        ViewPago obj = new ViewPago();
         obj.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_txtPagarActionPerformed
@@ -531,20 +531,21 @@ public class InterfazVuelos extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(InterfazVuelos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ViewVuelos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(InterfazVuelos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ViewVuelos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(InterfazVuelos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ViewVuelos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(InterfazVuelos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ViewVuelos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new InterfazVuelos().setVisible(true);
+                new ViewVuelos().setVisible(true);
             }
         });
     }

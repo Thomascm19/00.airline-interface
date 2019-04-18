@@ -9,12 +9,12 @@ package proyecto.pkgfinal;
  *
  * @author Thomas-CM
  */
-public class InterfazClientes extends javax.swing.JFrame {
+public class ViewClientes extends javax.swing.JFrame {
 
     /**
      * Creates new form InterfazClientes
      */
-    public InterfazClientes() {
+    public ViewClientes() {
         initComponents();
     }
 
@@ -96,19 +96,19 @@ public class InterfazClientes extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVolverActionPerformed
-        InterfazPrincipal obj = new InterfazPrincipal();
+        ViewPrincipal obj = new ViewPrincipal();
         obj.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_btnVolverActionPerformed
 
     private void btnVuelos2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVuelos2ActionPerformed
-        InterfazVuelos obj = new InterfazVuelos();
+        ViewVuelos obj = new ViewVuelos();
         obj.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_btnVuelos2ActionPerformed
 
     private void btnPaquetesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPaquetesActionPerformed
-        InterfazPaquetes obj = new InterfazPaquetes();
+        ViewPaquetes obj = new ViewPaquetes();
         obj.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_btnPaquetesActionPerformed
@@ -130,20 +130,21 @@ public class InterfazClientes extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(InterfazClientes.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ViewClientes.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(InterfazClientes.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ViewClientes.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(InterfazClientes.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ViewClientes.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(InterfazClientes.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ViewClientes.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new InterfazClientes().setVisible(true);
+                new ViewClientes().setVisible(true);
             }
         });
     }

@@ -5,12 +5,12 @@ import javax.swing.JOptionPane;
  *
  * @author Thomas-CM
  */
-public class InterfazPersonal extends javax.swing.JFrame {
+public class ViewPersonal extends javax.swing.JFrame {
 
     /**
      * Creates new form InterfazPersonal
      */
-    public InterfazPersonal() {
+    public ViewPersonal() {
         initComponents();
     }
 
@@ -30,11 +30,11 @@ public class InterfazPersonal extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         btnGuardar = new javax.swing.JButton();
-        comboPilotos = new javax.swing.JComboBox<>();
-        comboAzafatas = new javax.swing.JComboBox<>();
-        comboOficiales = new javax.swing.JComboBox<>();
-        comboComisarios = new javax.swing.JComboBox<>();
-        comboPasajeros = new javax.swing.JComboBox<>();
+        comboPilotos = new javax.swing.JComboBox<String>();
+        comboAzafatas = new javax.swing.JComboBox<String>();
+        comboOficiales = new javax.swing.JComboBox<String>();
+        comboComisarios = new javax.swing.JComboBox<String>();
+        comboPasajeros = new javax.swing.JComboBox<String>();
         btnVolver = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -58,25 +58,25 @@ public class InterfazPersonal extends javax.swing.JFrame {
             }
         });
 
-        comboPilotos.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6" }));
+        comboPilotos.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "1", "2", "3", "4", "5", "6" }));
 
-        comboAzafatas.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6" }));
+        comboAzafatas.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "1", "2", "3", "4", "5", "6" }));
 
-        comboOficiales.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3" }));
+        comboOficiales.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "1", "2", "3" }));
         comboOficiales.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 comboOficialesActionPerformed(evt);
             }
         });
 
-        comboComisarios.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3" }));
+        comboComisarios.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "1", "2", "3" }));
         comboComisarios.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 comboComisariosActionPerformed(evt);
             }
         });
 
-        comboPasajeros.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20" }));
+        comboPasajeros.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20" }));
         comboPasajeros.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 comboPasajerosActionPerformed(evt);
@@ -199,7 +199,7 @@ public class InterfazPersonal extends javax.swing.JFrame {
     }//GEN-LAST:event_comboPasajerosActionPerformed
 
     private void btnVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVolverActionPerformed
-        InterfazAgentes obj = new InterfazAgentes();
+        ViewAgentes obj = new ViewAgentes();
         obj.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_btnVolverActionPerformed
@@ -221,20 +221,21 @@ public class InterfazPersonal extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(InterfazPersonal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ViewPersonal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(InterfazPersonal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ViewPersonal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(InterfazPersonal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ViewPersonal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(InterfazPersonal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ViewPersonal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new InterfazPersonal().setVisible(true);
+                new ViewPersonal().setVisible(true);
             }
         });
     }

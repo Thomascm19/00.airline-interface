@@ -9,12 +9,12 @@ package proyecto.pkgfinal;
  *
  * @author Thomas-CM
  */
-public class InterfazAgentes extends javax.swing.JFrame {
+public class ViewAgentes extends javax.swing.JFrame {
 
     /**
      * Creates new form InterfazAgentes
      */
-    public InterfazAgentes() {
+    public ViewAgentes() {
         initComponents();
     }
 
@@ -122,31 +122,31 @@ public class InterfazAgentes extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnPersonalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPersonalActionPerformed
-        InterfazPersonal obj = new InterfazPersonal();
+        ViewPersonal obj = new ViewPersonal();
         obj.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_btnPersonalActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        InterfazPrincipal obj = new InterfazPrincipal();
+        ViewPrincipal obj = new ViewPrincipal();
         obj.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void btnAvionesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAvionesActionPerformed
-        InterfazAviones obj = new InterfazAviones();
+        ViewAviones obj = new ViewAviones();
         obj.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_btnAvionesActionPerformed
 
     private void btnRutaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRutaActionPerformed
-        InterfazRutaOperaciones obj = new InterfazRutaOperaciones();
+        ViewRutaOperaciones obj = new ViewRutaOperaciones();
         obj.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_btnRutaActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        InterfazAerolinea obj = new InterfazAerolinea();
+        ViewAerolinea obj = new ViewAerolinea();
         obj.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_jButton4ActionPerformed
@@ -168,20 +168,21 @@ public class InterfazAgentes extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(InterfazAgentes.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ViewAgentes.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(InterfazAgentes.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ViewAgentes.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(InterfazAgentes.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ViewAgentes.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(InterfazAgentes.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ViewAgentes.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new InterfazAgentes().setVisible(true);
+                new ViewAgentes().setVisible(true);
             }
         });
     }

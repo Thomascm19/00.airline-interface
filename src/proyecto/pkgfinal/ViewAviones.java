@@ -5,12 +5,12 @@ import javax.swing.JOptionPane;
  *
  * @author Thomas-CM
  */
-public class InterfazAviones extends javax.swing.JFrame {
+public class ViewAviones extends javax.swing.JFrame {
 
     /**
      * Creates new form InterfazAviones
      */
-    public InterfazAviones() {
+    public ViewAviones() {
         initComponents();
     }
 
@@ -31,7 +31,7 @@ public class InterfazAviones extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
-        comboSillas = new javax.swing.JComboBox<>();
+        comboSillas = new javax.swing.JComboBox<String>();
         txtCombustible = new javax.swing.JTextField();
         txtTipo = new javax.swing.JTextField();
         txtEstado = new javax.swing.JTextField();
@@ -59,7 +59,7 @@ public class InterfazAviones extends javax.swing.JFrame {
 
         jLabel9.setText("Numero de turbinas");
 
-        comboSillas.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20" }));
+        comboSillas.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20" }));
 
         txtTipo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -217,7 +217,7 @@ public class InterfazAviones extends javax.swing.JFrame {
     }//GEN-LAST:event_btnGuardarActionPerformed
 
     private void btnVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVolverActionPerformed
-        InterfazAgentes obj = new InterfazAgentes();
+        ViewAgentes obj = new ViewAgentes();
         obj.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_btnVolverActionPerformed
@@ -239,20 +239,21 @@ public class InterfazAviones extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(InterfazAviones.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ViewAviones.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(InterfazAviones.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ViewAviones.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(InterfazAviones.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ViewAviones.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(InterfazAviones.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ViewAviones.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new InterfazAviones().setVisible(true);
+                new ViewAviones().setVisible(true);
             }
         });
     }
